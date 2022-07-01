@@ -40,7 +40,7 @@ console.log(removeSpecialAlternative('hello 123 !@#$%^WORLD?._'));
 // ************************************************
 
 function removeSpacesFromString(str) {
-  // return str.replace(' ', '');  // replaces only the first and last spaces ->output=>hello world
+  // return str.replace(' ', ''); // replaces only the first and last spaces ->output=>hello world
   // return str.replaceAll(' ', ''); //it will replace all occurrences . output->helloworld
   // return str.replace(/ /g, ''); //it replaces all occurrences of space
   // Note that this regular expression does not match tabs and new lines.
@@ -51,3 +51,8 @@ function removeSpacesFromString(str) {
 
 console.log(removeSpacesFromString(' hello world '));
 //helloworld -> returns without any spaces
+console.log(
+  removeSpacesFromString(` hello I      love 
+    Beautiful
+World!`)
+);
