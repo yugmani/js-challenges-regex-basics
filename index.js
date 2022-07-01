@@ -35,3 +35,19 @@ console.log(removeSpecialAlternative('hello 123 !@#$%^WORLD?._'));
 // If you need to exclude other characters from being removed, add them between the square brackets of the regex. eg. str.replace(/[^a-zA-Z0-9 %]/g, ''); ->to match '%' character as well.
 // However, note that the caret ^ symbol has to be the first character in the square brackets to mean "not the following characters".
 // '^' the caret symbol means 'not the following characters'.
+
+// Replace all Spaces from a String in JavaScript
+// ************************************************
+
+function removeSpacesFromString(str) {
+  // return str.replace(' ', '');  // replaces only the first and last spaces ->output=>hello world
+  // return str.replaceAll(' ', ''); //it will replace all occurrences . output->helloworld
+  // return str.replace(/ /g, ''); //it replaces all occurrences of space
+  // Note that this regular expression does not match tabs and new lines.
+  // *******************************************************
+  //  If you want to remove all spaces, tabs and new lines do this instead:
+  return str.replace(/[\s]/g, '');  //helloworld
+}
+
+console.log(removeSpacesFromString(' hello world '));
+//helloworld -> returns without any spaces
